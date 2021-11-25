@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-{
+
   /* 
     Avengers: 
         Avengers: endgame - tt4154796
@@ -18,7 +18,7 @@ import styled from "styled-components";
         The Twilight Saga: New Moon - tt1259571
         The Twilight Saga: Eclipse - tt1325004
 */
-}
+
 
 export const TopThree = ({movies}) => {
     
@@ -29,18 +29,16 @@ export const TopThree = ({movies}) => {
         setInterval(() => {
             setTopSetMovies(topSetMoviesArr[count])
             count++
-            if(count == 3) {
+            if(count === 3) {
                 count = 0;
             }
         }, 20000)
     };
-    
     useEffect(() => {
         refreshTopSetMovies()
         
         return () => {
             setTopSetMovies([]);
-            count = 1;
         }
     }, [])
     
