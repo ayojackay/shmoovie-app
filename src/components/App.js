@@ -1,4 +1,6 @@
 import { Switch, Route } from "react-router-dom";
+import { Header } from "./atoms";
+import { Home } from "./pages";
 
 function App() {
   
@@ -7,7 +9,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/">
-          <h1>Home</h1>
+          <Home />
         </Route>
       </Switch>
     </div>
