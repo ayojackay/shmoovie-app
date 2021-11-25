@@ -1,6 +1,6 @@
 import { Switch, Route } from "react-router-dom";
 import { Header } from "./atoms";
-import { Home } from "./pages";
+import { Home, Movies } from "./pages";
 
 function App() {
   
@@ -8,6 +8,7 @@ function App() {
     <div>
       <Header />
       <Switch>
+        <Route path="/movies" render={({location}) => <Movies searchResults={location.state} />}/>
         <Route path="/">
           <Home />
         </Route>
